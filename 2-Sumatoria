@@ -1,0 +1,10 @@
+function sumatoria (num) {
+  if (num == 0) {
+    return 1;
+  }
+  else {
+    return num + sumatoria (num - 1); 
+  }
+}
+
+document.write (sumatoria (37) );
