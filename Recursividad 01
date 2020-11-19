@@ -1,0 +1,71 @@
+// SECUENCIA
+function texto ( cadena ) {
+  document.write ( cadena + "<br>" );
+}
+
+function salto () {
+  document.write ( "<br>" );
+}
+
+texto ( "SECUENCIALIDAD" ); salto();
+
+texto ( 1 );
+texto ( 2 );
+texto ( 3 );
+salto();
+
+// ITERACIÓN
+texto ( "ITERACIÓN" ); salto();
+
+var i = 0;
+while ( i <= 7 ) {
+  texto ( i );
+  i = i + 1;
+}
+
+// RECURSIVIDAD
+
+salto();
+texto ( "RECURSIVIDAD" );
+
+function numeros ( a, b ) {
+  if ( a > b ) {
+    return;
+  }
+  else {
+    texto ( a );
+    numeros ( a + 1, b);
+  }
+}
+
+numeros ( 2, 8 );
+
+// MULTIPLICACIÓN RECURSIVA
+
+/*
+6 * 4 = 4 + 4 + 4 + 4 + 4 + 4 = 24
+
+5 * 4 =     4 + 4 + 4 + 4 + 4 = 20
+
+6 * 4 = 4 + (5 * 4)
+
+0 * 4 = 0
+*/
+
+function multiplicar ( a, b ) {
+  if ( a == 0 ) {
+    return 0;
+  }
+  else {
+    return b + multiplicar ( a - 1, b );
+  }
+}
+
+var x = 37;
+var y = 7;
+
+respuesta = multiplicar ( x, y );
+
+salto();
+texto ( "MULTIPLICAR RECURSIVO" );
+texto ( x + " * " + y + " = " + respuesta ); salto();
